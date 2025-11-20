@@ -1,0 +1,4662 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/andres-dc7/SQL.subqueryng/blob/main/Data_Structured_py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0LR1AC_bh7BL"
+      },
+      "source": [
+        "# <center> PYTHON - Estructura de datos </center>\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# I. Listas\n",
+        "Una lista es una secuencias ordenadas de objetos de distintos tipos [numero, letra, flotante, fecha, listas, tuplas, diccionarios, etc].\n",
+        "\n",
+        "Se construyen poniendo los elementos entre corchetes [ ] separados por comas.\n",
+        "\n",
+        "Se caracterizan por:\n",
+        "\n",
+        "* Tienen orden. inicia con el valor de 0\n",
+        "* Pueden contener elementos de distintos tipos.\n",
+        "* Son **mutables**, es decir, pueden alterarse durante la ejecución de un programa."
+      ],
+      "metadata": {
+        "id": "IR2755AYkY30"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "dZMsikakeNRr",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d7dd015b-95f3-4b7f-cd01-f4322771362e"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ],
+      "source": [
+        "# Una lista puede ir incrementando si un progama se lo pide.\n",
+        "#iniciar una lista vacia\n",
+        "[]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "dsPP5bYiiN30",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e960ff73-1741-4629-d364-ab3cfc398ef8"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "list"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ],
+      "source": [
+        "# Nos permite identificar cual es el tipo de objeto\n",
+        "type([])"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "KOo_EoAliP3M"
+      },
+      "outputs": [],
+      "source": [
+        "# Los valores ingresados en la lista pueden contener disintos tipos de datos\n",
+        "[5, \"dos\", 'dany', True, 10.3]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "gnbT-la-iR8h",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "183e76e3-5512-455d-e61f-9b1c74529d57"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[5, [9, 3], 7]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ],
+      "source": [
+        "# Creando una sub lista o lista anidada dentro de una lina\n",
+        "[5, [9, 3], 7]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "aHND6JAbiX0s"
+      },
+      "source": [
+        "## Creación de listas mediante la función list()\n",
+        "Otra forma de crear listas es mediante la función **list()**.\n",
+        "\n",
+        "list(c) : Crea una lista con los elementos de la secuencia o colección c.\n",
+        "Se pueden indicar los elementos separados por comas, mediante una cadena, o mediante una colección de elementos iterable."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "olA2t-dEievL",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "281c21f0-6274-4544-da65-278c05f8bc82"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ],
+      "source": [
+        "#Crear una lista utilizando la siguiente funcion\n",
+        "list()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(list())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dyNCkPV8NRvU",
+        "outputId": "8e3fc1f5-5f6e-496d-a428-5d57bccfa8c6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "list"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Creando una lista, en funcion a una tupla \"datos en parentesis\"\n",
+        "list((10,20,30))"
+      ],
+      "metadata": {
+        "id": "6I6vQeC4YCLK",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c3b0cdc2-03da-4cca-f006-87fb9a95cf23"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[10, 20, 30]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Creando una lista, en funcion a otra lista\n",
+        "list([10,20,30])"
+      ],
+      "metadata": {
+        "id": "ui-sVOspXFeQ",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a0744c3a-06b4-444d-d107-bb60e849f4c4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[10, 20, 30]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "[10,20,30]"
+      ],
+      "metadata": {
+        "id": "sabX-b3v2a2Q",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "44d5cadf-92fc-44fd-ba2f-a074cd86361e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[10, 20, 30]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "[10]"
+      ],
+      "metadata": {
+        "id": "8XD05rN9XiH_",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d097ae7d-e38a-491a-d8a4-b1e9ddde63d2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[10]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 9
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "5VDukAVK5XtH"
+      },
+      "outputs": [],
+      "source": [
+        "#Uso de el casteo, a partir de un texto podemos crear una lista\n",
+        "lista_ejemplo = list(('hola mundo','dany','feliz noche'))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_ejemplo"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1G-4c6VGlL0B",
+        "outputId": "c61e3249-0de4-4101-de3e-f06874f59b02"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['hola mundo', 'dany', 'feliz noche']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(lista_ejemplo)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4zV6eOTelQFU",
+        "outputId": "e54d6307-cec1-4766-8be8-874f9925ff93"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "list"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "zQjkk4IFimyL"
+      },
+      "source": [
+        "## Acceso a los elementos de una lista\n",
+        "Se utilizan los mismos operadores de acceso que para cadenas de caracteres.\n",
+        "\n",
+        "* l[i] : Devuelve el elemento de la lista l con el índice i.\n",
+        " El índice del primer elemento de la lista es 0."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Xj2LJP8m53vs"
+      },
+      "outputs": [],
+      "source": [
+        "#Forma 1, inicializando una lista, que luego vamos a utilizar\n",
+        "lstFruta = []"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(lstFruta)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MsNM7sRiljK7",
+        "outputId": "03f98c67-fa82-40fc-e696-23c49561db3c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "list"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 17
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "M9obmsAZ58aN"
+      },
+      "outputs": [],
+      "source": [
+        "#forma 2, inicializando una lista, que luego vamos a utilizar\n",
+        "lstFrutas = list()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(lstFrutas)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MxF5DDmYlqvJ",
+        "outputId": "691b9027-0823-4688-fee9-60964687db01"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "list"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 19
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "BKXIAZIHisux"
+      },
+      "outputs": [],
+      "source": [
+        "#Creamos una lista\n",
+        "a = [400, 270, 152,270, 360,420]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "khUV4LG85zTs",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "51a8c446-9776-4bb6-9c8a-049a03415748"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[400, 270, 152, 270, 360, 420]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 21
+        }
+      ],
+      "source": [
+        "a"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Mp4u26zDixc-",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "3c900b36-1ed3-46b8-ae1b-00aaadaf90ad"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "420"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 22
+        }
+      ],
+      "source": [
+        "#Accediendo a los elementos, a traves de los indices.\n",
+        "a[5]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "6dTp4pMxiuD8",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "da29b68b-e90f-413b-a62b-672703a7ffbb"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "400"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 23
+        }
+      ],
+      "source": [
+        "a[0]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "8HWHFmckf1Ep",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5240a26a-3376-4ce7-e0bd-66461b5892b1"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "360"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 24
+        }
+      ],
+      "source": [
+        "a[-2]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "YgXnDVb6izd_"
+      },
+      "outputs": [],
+      "source": [
+        "# Me va a devolver informacion si/no\n",
+        "a[6]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Creamos una lista\n",
+        "a = [400, 270, [152,270], 360,420]\n",
+        "a"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "u12Gn5ufnIQc",
+        "outputId": "2d100388-bc5b-4079-fa63-1ab9e0505a46"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[400, 270, 152, 270, 360, 420]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 28
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#[pos_ini:pos_final+1]\n",
+        "a[2:5+1]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sG5jiQkCm6Y6",
+        "outputId": "fbaa9537-6d4b-446f-931e-d6915313b0bd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[152, 270, 360, 420]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 29
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "IGTRhVQBi5LU"
+      },
+      "source": [
+        "### Sublistas\n",
+        "* l[i:j:k] : Devuelve la sublista desde el elemento de l con el índice i hasta el elemento anterior al índice j, tomando elementos cada k."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_anidada = [400, [570, 152, [270, 360]], 420]\n",
+        "lista_anidada"
+      ],
+      "metadata": {
+        "id": "4OxcbHwLebdO",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "2647293f-af84-4769-821a-e7835cc3e81e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[400, [570, 152, [270, 360]], 420]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 31
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Accediendo al indice del numero 270\n",
+        "lista_anidada[1][2][0]"
+      ],
+      "metadata": {
+        "id": "bUgqd7zbedwa",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b528a1d3-fe95-42b5-f711-648844a69bfa"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "270"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 35
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "T_d0_jBfdlYN"
+      },
+      "outputs": [],
+      "source": [
+        "a = [400, [270, [20,34],[45,152, [900,810]],1270, 360], 420]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "7ne104TRdrdE",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "210570c6-4310-465e-a438-bf232d80e01f"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "900"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 41
+        }
+      ],
+      "source": [
+        "# acceder al valor = 900\n",
+        "# a[indice lista 1][indice lista 2][indice lista 3]\n",
+        "a[1][2][2][0]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [400, [20,16,[12,10]],[270, [20,34,[8,10]],[45,[9,991],[900,[20,92],420]],270, 360],920]"
+      ],
+      "metadata": {
+        "id": "bE3PbE7MhdiT"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# acceder al valor = 991\n",
+        "# a[indice lista 1][indice lista 2][indice lista 3]\n",
+        "a[2][2][1][1]"
+      ],
+      "metadata": {
+        "id": "zMfDs4wnhfms",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "286a2a90-0dc0-42b2-e1a9-c42c31b5878b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "991"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 46
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [400, [20,16,[12,10]],[270,[20,16,[12,[20,16,[12,1992]],309]],[20,34,[8,10]],[20,92],420]]"
+      ],
+      "metadata": {
+        "id": "CA6TrDQjhzCv"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CRa2TXqJsCam",
+        "outputId": "6bfb2dbe-6c7d-4c90-bfd1-98285ec00338"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "3"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 53
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(a[2])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tXHktQGbrudX",
+        "outputId": "78a4c0da-8334-491a-80f4-543c58cf4f1c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 54
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# min\n",
+        "# Acceder al valor = 34\n",
+        "# a[indice lista 1][indice lista 2][indice lista 3]\n",
+        "a[2][2][1]"
+      ],
+      "metadata": {
+        "id": "fYnViOdIiBoy",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0bbef9f5-be65-4b36-ef2b-79247036fe46"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "34"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 50
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "STbHzBiLjLVl"
+      },
+      "source": [
+        "## Operaciones que NO modifican una lista\n",
+        "\n",
+        "> Agregar bloque entrecomillado\n",
+        "\n",
+        "\n",
+        "* len(l) : Devuelve el número de elementos de la lista l.\n",
+        "* min(l) : Devuelve el mínimo elemento de la lista l siempre que los datos sean comparables.\n",
+        "* max(l) : Devuelve el máximo elemento de la lista l * siempre que los datos sean comparables.\n",
+        "* sum(l) : Devuelve la suma de los elementos de la lista l, siempre que los datos se puedan sumar.\n",
+        "* dato in l : Devuelve True si el dato dato pertenece a la lista l y False en caso contrario.\n",
+        "* l.index(dato) : Devuelve la posición que ocupa en la lista l el primer elemento con valor dato.\n",
+        "* l.count(dato) : Devuelve el número de veces que el valor dato está contenido en la lista l."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "kqxS-5Wsjdt5"
+      },
+      "outputs": [],
+      "source": [
+        "#Ejemplo de mutacion\n",
+        "\n",
+        "#inicia\n",
+        "list_prueba = [400,270, 152,270,120,420]\n",
+        "\n",
+        "#termina\n",
+        "list_prueba = [1,3, 8,'dany',1,2]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list_prueba = [400, 270, 152, 270, 120]"
+      ],
+      "metadata": {
+        "id": "7gYQm91Lgiqg"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "6V1L8KXCjg_c",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "28c64683-9b3e-45f9-e1bb-bcbeaa6429b5"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 68
+        }
+      ],
+      "source": [
+        "# Me va a devolver el tamanio, cantidad de datos que tiene una lista\n",
+        "len(list_prueba)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "eXcWzp-UjirK",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "16fcfbb2-dab3-4e4c-bfd5-f073e0c5e816"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "120"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 67
+        }
+      ],
+      "source": [
+        "#valor minimo, siempre y cuando los valores sean comparables\n",
+        "min(list_prueba)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Tj94UqBvsrkv",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c0c67151-33fd-4b4b-c29c-f55d25735db1"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "400"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 69
+        }
+      ],
+      "source": [
+        "#valor maximo, siempre y cuando los valores sean comparables\n",
+        "max(list_prueba)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#valor maximo, siempre y cuando los valores sean comparables\n",
+        "sum(list_prueba)"
+      ],
+      "metadata": {
+        "id": "GG1EYmnvkxta",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "3edb92fe-d45f-4854-d9a2-e01d79268f2a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "1212"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 70
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "i9F9mnF97gM-",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a450ae51-dd16-49dc-ae68-7528fc0aec83"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['dany', 'david', 'Daniel', 'Dario']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 87
+        }
+      ],
+      "source": [
+        "#Creamos una variable con una lista de datos\n",
+        "# Mayuculas\n",
+        "# Minusculas\n",
+        "list_cadena = ['dany','david','Daniel','Dario']\n",
+        "list_cadena\n",
+        "\n",
+        "# Python no los diferencia, asi sean mayusculas o minuscula\n",
+        "# abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "7MU7FXDh7nbS",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "da1d5c6c-149f-4cd4-e93f-9fa538ee5e6b"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Daniel'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 88
+        }
+      ],
+      "source": [
+        "min(list_cadena)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "max(list_cadena)"
+      ],
+      "metadata": {
+        "id": "pJyU2m5Lla0N",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "c9c54543-442e-4cd9-c97c-cb532ce6fd99"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'david'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 89
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "8gxmFxWXjj7V"
+      },
+      "outputs": [],
+      "source": [
+        "#Valor maximo\n",
+        "list_numeros = [400, [270, 152, [360,420]],270, 360,420]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for i in list_numeros:\n",
+        "  print(type(i))\n",
+        "\n",
+        "#Los datos no son comparables"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OjmA1k6GV3Fs",
+        "outputId": "e55e032a-5a05-42bd-83ee-c0247a49684e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'int'>\n",
+            "<class 'list'>\n",
+            "<class 'int'>\n",
+            "<class 'int'>\n",
+            "<class 'int'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "jWhHF1F_uS7d",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 144
+        },
+        "outputId": "b14d2af5-3f6f-40e0-f640-68dcd911e47b"
+      },
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "'<' not supported between instances of 'list' and 'int'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-1614500702.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mmin\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mlist_numeros\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m: '<' not supported between instances of 'list' and 'int'"
+          ]
+        }
+      ],
+      "source": [
+        "min(list_numeros)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "max(list_numeros)"
+      ],
+      "metadata": {
+        "id": "6T3F3fGuWUCc"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "4jVuTEUQM4aZ"
+      },
+      "outputs": [],
+      "source": [
+        "sum(list_numeros)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "m3cmlpmXjmtS",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e73748c4-1ac7-4287-89e5-1d142f013165"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "1872"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 94
+        }
+      ],
+      "source": [
+        "a = [400, 270, 152,270, 360,420]\n",
+        "\n",
+        "sum(a)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "VVxpsbVT9b8k",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f7fd0479-0187-4605-b547-24a1e058e979"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 95
+        }
+      ],
+      "source": [
+        "400 in a"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "IGM-wyOy9kki",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "03575c31-8507-45e6-b892-2d97b27bbbfb"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 96
+        }
+      ],
+      "source": [
+        "153 in a"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "dWVnm0la9ope"
+      },
+      "outputs": [],
+      "source": [
+        "#Creamos una lista anidada, y trabajamos con sus datos\n",
+        "b = [\"dany\",False,[-5.256,-5.256,-5.256,-5.256,[4,'miguel',[3.1415,'manuel',['dany']],[True,34]],'piero']]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "'miguel' in b[2][4]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MSN2K7CTvKUx",
+        "outputId": "cdc11e69-80db-428e-960f-b2a49d79f0c7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 100
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "b[2][4]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "W7b0aH9tXAPc",
+        "outputId": "534ba672-0a3c-4bed-cf24-64220d66efc3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[4, 'miguel', [3.1415, 'manuel', ['dany']], [True, 34]]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 112
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for iterante in b[2][4]:\n",
+        "  print(iterante)"
+      ],
+      "metadata": {
+        "id": "eagCwsnEC1hK",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "17500d71-e69b-4b1a-ada3-1baac54df277"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4\n",
+            "miguel\n",
+            "[3.1415, 'manuel', ['dany']]\n",
+            "[True, 34]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "MYXfAwnxiK0Q",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "3fda00e6-c487-4fa9-cc16-965dd6e5a913"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 107
+        }
+      ],
+      "source": [
+        "12 in b[2]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "EC9YJ002iicD",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "15330da6-6698-445f-e929-bf90f5c015e5"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 108
+        }
+      ],
+      "source": [
+        "False in b"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Creamos una lista anidada, y trabajamos con sus datos\n",
+        "b = [\"dany\",False,[[-5.256],[-5.256],[-5.256],[-5.256],[-5.256,-5.256,4,'miguel',[-5.256,-5.256,3.1415,'manuel',['dany']],[True,34]],'piero']]"
+      ],
+      "metadata": {
+        "id": "ddyBotKxv9Bm"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#ejmplo index\n",
+        "b.index([-5.256,-5.256,-5.256,-5.256,[4,'miguel',[3.1415,'manuel',['dany']],[True,34]],'piero'])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0o87QhKWwx_G",
+        "outputId": "972dcbeb-9a84-4bf4-d82d-1f21dba41d02"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "2"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 117
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#ejemplo count\n",
+        "b[2].count([-5.256])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bIK_GyAkwz62",
+        "outputId": "4c9c9866-a046-47a0-b626-d811303375d7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "4"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 124
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "QZ5anzqDyYWV"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Append\n",
+        "lista_append = list()"
+      ],
+      "metadata": {
+        "id": "FLDZvQSTyYjg"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_append.append('Dany Churapa')"
+      ],
+      "metadata": {
+        "id": "4WOe5ae2yoPH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_append"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QaL1USQVyldB",
+        "outputId": "e8e99268-ba6f-494a-8a37-f2a2a2694096"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Andres del Cid',\n",
+              " 'Percy Recines',\n",
+              " 'Jose Daniel',\n",
+              " 'Leomar de Pena',\n",
+              " 'Dany Churapa']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 138
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Insert\n",
+        "lista_append.insert(2,'Oriana Marcelo')"
+      ],
+      "metadata": {
+        "id": "YpWKkOYEyYtD"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(lista_append)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GFyNd3TUyZB7",
+        "outputId": "472ec01d-37a8-4fce-cdfd-f2aa3638c5b6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Andres del Cid', 'Percy Recines', 'Oriana Marcelo', 'Jose Daniel', 'Leomar de Pena', 'Dany Churapa']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5SwGm9MMjhPL"
+      },
+      "source": [
+        "## Operaciones que SI modifican una lista (mutable)\n",
+        "* l1 + l2 : Crea una nueva lista concatenan los elementos de la listas l1 y l2.\n",
+        "* l.append(dato) : Añade dato al **final** de la lista l.\n",
+        "* l.extend(sequencia) : Añade los datos de sequencia al final de la lista l.\n",
+        "* l.insert(índice, dato) : Inserta dato en la posición índice de la lista l y desplaza los elementos una posición a partir de la posición índice.\n",
+        "* l.remove(dato) : Elimina el primer elemento con valor dato en la lista l y desplaza los que están por detrás de él una posición hacia delante.\n",
+        "* l.sort() : Ordena los elementos de la lista l de acuerdo al orden predefinido, siempre que los elementos sean comparables.\n",
+        "* l.reverse() : invierte el orden de los elementos de la lista l."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "YEpdRdkfjm8e"
+      },
+      "outputs": [],
+      "source": [
+        "lista1 = [1, 3, 5] #imapres\n",
+        "lista2 = [2, 4, 6] #pares"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista3 = lista1 + lista2\n",
+        "lista3"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tKNE2ZZj0ZU4",
+        "outputId": "58928381-de8b-405f-e08e-1180131931d3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 3, 5, 2, 4, 6]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 156
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista3.sort()"
+      ],
+      "metadata": {
+        "id": "VZ6z6VJF0fr9"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista3"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DA9Voelw0iNc",
+        "outputId": "ce8949e7-f4d3-44cb-db65-e3959ec768b7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 2, 3, 4, 5, 6]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 158
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#antes de extend\n",
+        "lista1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "83o_B4yx0piN",
+        "outputId": "73d64480-13ad-40dc-ad9c-7ef446f09312"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 3, 5]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 160
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista1.extend(lista2)"
+      ],
+      "metadata": {
+        "id": "EC1iTEZCealU"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Despues de extend\n",
+        "lista1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "t-PLZlQk04PO",
+        "outputId": "fcf39cf2-3bdd-44a4-8d91-e88285226c51"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 3, 5, 2, 4, 6]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 165
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista1.remove(4)"
+      ],
+      "metadata": {
+        "id": "uNRVr5cpejKf"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7xJJ0p0Tesfw",
+        "outputId": "6dc13355-fb9e-4152-ce53-bca4e08e8a24"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[3, 5, 2, 4, 6]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 181
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista1.index(3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "74wF16oPfkTQ",
+        "outputId": "81d531cb-1ec2-4ff1-80e0-3610c335000c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "1"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 178
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista1.remove(3)"
+      ],
+      "metadata": {
+        "id": "aVx8Uinzfmot"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_tOsRvfx2OO3",
+        "outputId": "e7c20900-1513-404d-a804-f8387bad57c9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 3, 5, 2, 4, 6]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 186
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Lista completa/nueva\n",
+        "lista1.sort()\n",
+        "lista1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "B0VCspwdf7sm",
+        "outputId": "27ded3e1-0fb0-4e0e-843e-3db658423705"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 2, 3, 4, 5, 6]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 187
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista1.reverse()\n",
+        "lista1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TChuOaqegP3e",
+        "outputId": "b89fb300-6a01-4d7c-af3c-c64044ccb1b1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[6, 5, 4, 3, 2, 1]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 188
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "LKR6vK29dzoZ"
+      },
+      "source": [
+        "# Copia de listas\n",
+        "Existen dos formas de copiar listas:\n",
+        "\n",
+        "* Copia por referencia l1 = l2: Asocia la la variable l1 la misma lista que tiene asociada la variable l2, es decir, ambas variables apuntan a la misma dirección de memoria. Cualquier cambio que hagamos a través de l1 o l2 afectará a la misma lista.\n",
+        "\n",
+        "* Copia por valor l1 = list(l2): Crea una copia de la lista asociada a l2 en una dirección de memoria diferente y se la asocia a l1. Las variables apuntan a direcciones de memoria diferentes que contienen los mismos datos. Cualquier cambio que hagamos a través de l1 no afectará a la lista de l2 y viceversa."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "ojp8SprWd5o-"
+      },
+      "outputs": [],
+      "source": [
+        "# Copiar referencia/espejo\n",
+        "TC_sistemas = [3.5, 3.6, 3.7]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "07FslmR1d5r1"
+      },
+      "outputs": [],
+      "source": [
+        "#Implicitamente, crea una copia referenciada.\n",
+        "TC_marketing = TC_sistemas"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "oyjUmj8Bd-sp",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "3dd85449-878e-4242-d641-bb6881c2972a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[3.5, 3.6, 3.7]\n",
+            "[3.5, 3.6, 3.7]\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(TC_marketing)\n",
+        "print(TC_sistemas)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "ZuvAFfleeBgF"
+      },
+      "outputs": [],
+      "source": [
+        "TC_sistemas[1] = 3.8"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "TC_marketing.append(3.45)"
+      ],
+      "metadata": {
+        "id": "JgPMssWC4IKK"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(TC_marketing)\n",
+        "print(TC_sistemas)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WHUfxiUZ37sy",
+        "outputId": "6e262971-5b70-4919-cf30-24b5a339f989"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[3.5, 3.8, 3.7, 3.45]\n",
+            "[3.5, 3.8, 3.7, 3.45]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "TC_marketing.remove(3.5)"
+      ],
+      "metadata": {
+        "id": "Cw2zdHaNrGoh"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "LQ6sS1SoeB-T",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4463d578-59cf-4a8d-831e-f00547c705ef"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[3.8, 3.7, 3.45]\n",
+            "[3.8, 3.7, 3.45]\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(TC_marketing)\n",
+        "print(TC_sistemas)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "OYGiZ0EceKQz"
+      },
+      "outputs": [],
+      "source": [
+        "# Copiamos lista\n",
+        "# Copiar por valor\n",
+        "TC_sistemas = [3.5, 3.6, 3.7]\n",
+        "TC_comercial  = list(TC_sistemas)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "5FARuguIYE8K",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "732c68b2-dd91-4068-8461-a97689d9c6cf"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "sistemas 01: [3.5, 3.6, 3.7]\n",
+            "comercial 2: [3.5, 3.6, 3.7]\n"
+          ]
+        }
+      ],
+      "source": [
+        "print('sistemas 01:', TC_sistemas)\n",
+        "print('comercial 2:', TC_comercial)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "eIHPldlTePG7"
+      },
+      "outputs": [],
+      "source": [
+        "TC_sistemas[1] = 3.9"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "3brL-80O3rOv",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f3de44e4-6230-4ed8-ae68-f7b20968d2de"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "sistemas 01: [3.5, 3.9, 3.7]\n",
+            "comercial 2: [3.5, 3.6, 3.7]\n"
+          ]
+        }
+      ],
+      "source": [
+        "print('sistemas 01:', TC_sistemas)\n",
+        "print('comercial 2:', TC_comercial)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "pc89XHKXokGa"
+      },
+      "source": [
+        "**en 10 minutos**\n",
+        "Calcular promedio, min, max de un listado de notas:\n",
+        "* Ingresa la cantidad de notas a trabajar\n",
+        "* Ingresar las notas y las almacenaremos en una lista\n",
+        "* Calcular lo solicitado"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "c9hXs-rB-5Nx"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Rg-bog4mg0Gt"
+      },
+      "source": [
+        "# II. Tuplas\n",
+        "Una tupla es una secuencias ordenadas de objetos de distintos tipos.\n",
+        "\n",
+        "Se construyen poniendo los elementos entre paréntesis ( ) separados por comas.\n",
+        "\n",
+        "Se caracterizan por:\n",
+        "\n",
+        "* Tienen orden.\n",
+        "* Pueden contener elementos de distintos tipos.\n",
+        "* Son **inmutables es decir, NO pueden alterarse durante la ejecución de un programa**.\n",
+        "* Se usan habitualmente para representar colecciones de datos una determinada estructura semántica, como por ejemplo un vector o una matriz."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "vlzyRlUlg9Z3",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a55e923d-67d3-4ec6-f821-5aeef23fd139"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "()"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 203
+        }
+      ],
+      "source": [
+        "# Tupla vacía\n",
+        "()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "PKt8mLsPx6Ty",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "432e1be8-ccb1-4f44-b7b4-ab4acf293771"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "tuple"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 204
+        }
+      ],
+      "source": [
+        "type(())"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "dCi12NUmhFra",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d2faeee6-7ca9-4f2c-c379-4bfb880e9560"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(1, 'dos', (True, 3.1415), [1, 2, 3], True, 3.1415)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 205
+        }
+      ],
+      "source": [
+        "# Tupla con elementos de distintos tipos\n",
+        "(1, \"dos\", (True, 3.1415),[1,2,3], True, 3.1415)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type((1, \"dos\", (True, 3.1415),[1,2,3], True, 3.1415))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fn-Gu0bs5kF-",
+        "outputId": "aa279570-6a06-4e76-bee2-aa06792e92be"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "tuple"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 208
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "jSUi0zIMhMEx"
+      },
+      "source": [
+        "## Creación de tuplas mediante la función tuple()\n",
+        "Otra forma de crear tuplas es mediante la función tuple().\n",
+        "\n",
+        "**tuple(c)** : Crea una tupla con los elementos de la secuencia o colección c.\n",
+        "Se pueden indicar los elementos separados por comas, mediante una cadena, o mediante una colección de elementos iterable."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "UyqS48hchQXf",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "2525dd47-3027-448b-ba98-a630c3f6c611"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "()"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 209
+        }
+      ],
+      "source": [
+        "tuple()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "PO8OsUE2yNKL",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "13b8f68c-cb19-445b-d337-649dc139420f"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(1, 2, 3, 'Dany', True, 3.1415)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 210
+        }
+      ],
+      "source": [
+        "tuple((1,2,3,'Dany',True,3.1415))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "4b7hcacVhV3Z",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b94d29b8-0a80-447c-a249-4cb1bf4fa4c9"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(1, 2, 3, 'Dany', True, 3.1415)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 213
+        }
+      ],
+      "source": [
+        "m = tuple([1,2,3,'Dany',True,3.1415])\n",
+        "m"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(m)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qBYJIlkz54Kn",
+        "outputId": "3726fa0b-267f-4175-b134-2d2c48788d97"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "tuple"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 214
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_prueba = [(1,2,3),(123,32,23)]"
+      ],
+      "metadata": {
+        "id": "iij4JW3a1RfV"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_prueba"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iO-lPWz_6Vn9",
+        "outputId": "5ba8de61-3e78-4f81-b01d-268126bfb03e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[(1, 2, 3), (123, 32, 23)]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 216
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_prueba.append((5,6,7))"
+      ],
+      "metadata": {
+        "id": "BNyC5qr21Zol"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_prueba"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6413rjky1e6Z",
+        "outputId": "afd07ec8-ef86-4994-9bef-02078992ec9a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[(1, 2, 3), (123, 32, 23), (5, 6, 7)]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 218
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Cando una tupla, para probar agregarle informacion.\n",
+        "lista_prueba = tuple(lista_prueba)"
+      ],
+      "metadata": {
+        "id": "J2qruDDo1zMr"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(lista_prueba)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dglHGIwg6olF",
+        "outputId": "319685f9-bef2-42bf-c696-3799e4868794"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "tuple"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 220
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_prueba.append('Dany Churapa')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 144
+        },
+        "id": "4FsILVu915D2",
+        "outputId": "ca8d415f-50cb-4b73-b27d-ee059e1d73c3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "AttributeError",
+          "evalue": "'tuple' object has no attribute 'append'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-3819711362.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mlista_prueba\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mappend\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'Dany Churapa'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mAttributeError\u001b[0m: 'tuple' object has no attribute 'append'"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5ddkrVIghbWQ"
+      },
+      "source": [
+        "## Operaciones con que NO MODIFICAN una tupla\n",
+        "El acceso a los elementos de una tupla se realiza del mismo modo que en las listas. También se pueden obtener subtuplas de la misma manera que las sublistas.\n",
+        "\n",
+        "Las operaciones de listas que no modifican la lista también son aplicables a las tuplas.\n",
+        "\n",
+        "* len(l) : Devuelve el número de elementos de la tupla l.\n",
+        "* min(l) : Devuelve el mínimo elemento de la tupla l siempre que los datos sean comparables.\n",
+        "* max(l) : Devuelve el máximo elemento de la lista l * siempre que los datos sean comparables.\n",
+        "* sum(l) : Devuelve la suma de los elementos de la lista l, siempre que los datos se puedan sumar.\n",
+        "* dato in l : Devuelve True si el dato dato pertenece a la lista l y False en caso contrario.\n",
+        "* l.index(dato) : Devuelve la posición que ocupa en la lista l el primer elemento con valor dato.\n",
+        "* l.count(dato) : Devuelve el número de veces que el valor dato está contenido en la lista l."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "dj5ILW1Ehdst",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "73b4ff22-5005-480b-82f2-35be46a77431"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(1, 2, 3)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 222
+        }
+      ],
+      "source": [
+        "tupla_a = (1,2,3)\n",
+        "tupla_a"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#las tuplas tienen un orden\n",
+        "tupla_a[2]"
+      ],
+      "metadata": {
+        "id": "S1xqWIdVxcnS",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "477be0a8-b9e3-45ef-ff2e-016bc1418ea3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "3"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 223
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "5MjuZos-hgZz",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "20bc1edd-0010-4420-f8b5-a0d25b578515"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(1, 2, 3)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 229
+        }
+      ],
+      "source": [
+        "#las tuplas tienen un orden\n",
+        "tupla_a[ :2+1]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "hLDApBFnhh6V",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "875a3390-119d-41a3-b28a-43b3e4825c55"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "3"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 225
+        }
+      ],
+      "source": [
+        "len(tupla_a)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "X4sJ179pCQ3R",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a00932c1-57c1-42d8-80b8-d69bf61a4d8e"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "3"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 226
+        }
+      ],
+      "source": [
+        "#siempre y cuando los valores sean comparables\n",
+        "max(tupla_a)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#siempre y cuando los valores sean comparables\n",
+        "min(tupla_a)"
+      ],
+      "metadata": {
+        "id": "VkRYP1Mu-7as",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "1833934c-9463-48a1-964a-791dcdda5d31"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "1"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 227
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#siempre y cuando los dato se puedan sumar\n",
+        "sum(tupla_a)"
+      ],
+      "metadata": {
+        "id": "JjQHv20_ctWl",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ef2023a1-297b-4191-89e5-4257793db7c7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "6"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 230
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "6ziJM-G3hkeV"
+      },
+      "outputs": [],
+      "source": [
+        "tupla_a = (1,'dany',3)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Me devuelve la posicion del indice del valor\n",
+        "tupla_a.index('dany')"
+      ],
+      "metadata": {
+        "id": "KftrIx3ifD7e",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d5f57723-c63b-4654-96af-be4c2fe44d8e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "1"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 232
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_prueba = [1,2,3,('dany','s'),100]\n",
+        "lista_prueba"
+      ],
+      "metadata": {
+        "id": "yyNJXB8cc-k5",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9a29cfbe-6895-4d43-f8d9-8e743609dba6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 2, 3, ('dany', 's'), 100]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 233
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tupla_prueba = (1,2,3,['dany','s'],100)\n",
+        "tupla_prueba"
+      ],
+      "metadata": {
+        "id": "3RiTq3QRdGzz",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "86e2d15a-b727-4385-8c96-f82ca272c8c7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(1, 2, 3, ['dany', 's'], 100)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 235
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_prueba[3]"
+      ],
+      "metadata": {
+        "id": "rfVLsbc5xlbN",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "569d6a9b-6939-4e53-b09c-886401959184"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "('dany', 's')"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 234
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tupla_prueba[3]"
+      ],
+      "metadata": {
+        "id": "BZMZrxjQxoVs",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9b34dfb7-b534-4eff-ac56-7f77722a4a88"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['dany', 's']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 236
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# acceder al numero 4\n",
+        "tuplaPrueba = (1,2,3,(1,2,(3,4)))\n",
+        "tuplaPrueba"
+      ],
+      "metadata": {
+        "id": "phzplUfQ_UaH",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "2580020f-517b-40a3-ddf9-1824b3d7610c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(1, 2, 3, (1, 2, (3, 4)))"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 238
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# acceder al numero 4\n",
+        "tuplaPrueba[3][2][1]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rKQAYk-x8xiy",
+        "outputId": "71b55ec6-4d05-4834-e112-0c49896b8492"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "4"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 239
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tupla_concatenada = (1,2,3) + (1,2,(3,4))"
+      ],
+      "metadata": {
+        "id": "Nf51Yq3T9NJZ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tupla_concatenada"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qbA-PMWA9Tih",
+        "outputId": "f2fd3739-9eb7-4d13-beb5-fa1bea3c8436"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(1, 2, 3, 1, 2, (3, 4))"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 241
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "PGy37Ej3uLFw"
+      },
+      "source": [
+        "# III. Diccionarios\n",
+        "Un diccionario es una colección de pares formados por una **clave y un valor** asociado a la clave.\n",
+        "\n",
+        "Se construyen poniendo los pares entre llaves { } separados por comas, y separando la clave del valor con dos puntos :.\n",
+        "\n",
+        "### Se caracterizan por:\n",
+        "\n",
+        "* No tienen orden.\n",
+        "* Pueden contener elementos de distintos tipos.\n",
+        "* Son mutables, es decir, pueden alterarse durante la ejecución de un programa.\n",
+        "* **Las claves son únicas**, es decir, no pueden repetirse en un mismo diccionario, y pueden ser de cualquier tipo de datos inmutable."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "eQ8oLaYaF8IA"
+      },
+      "outputs": [],
+      "source": [
+        "# Listas = [] / es mutable, modificable\n",
+        "# Tuplas = () / no es mutable, no modificable\n",
+        "# Diccionarios = {} / es mutable, modificables"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type([])"
+      ],
+      "metadata": {
+        "id": "f4DugpiMg20v",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6b3b7059-93e8-487e-9816-be1fb5fc58ff"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "list"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(())"
+      ],
+      "metadata": {
+        "id": "3bCLGW8Hg3E7",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "259dc0d4-2cd7-46f2-e9ad-b5514eb2821f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "tuple"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "X_1R-nyIuRf9",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "791ffab6-9546-4033-8535-f0c768249396"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "dict"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ],
+      "source": [
+        "# Diccionario vacío\n",
+        "type({})"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "4NcGHA5IugdJ"
+      },
+      "outputs": [],
+      "source": [
+        "# Diccionario con elementos de distintos tipos\n",
+        "#NaN = Not a Number\n",
+        "dict100 = {'nombre':'Alfredo', 'despacho': 218 , 'email':'asalber@ceu.es'}"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dict100"
+      ],
+      "metadata": {
+        "id": "6O3GZAX31YaF",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c8929769-084e-4a83-f212-b169ac9d8404"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'nombre': 'Alfredo', 'despacho': 218, 'email': 'asalber@ceu.es'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "3Sch1qtsujo2"
+      },
+      "outputs": [],
+      "source": [
+        "# Diccionarios anidados\n",
+        "dict2 = {'nombre_completo':{'nombre': 'Alfredo', 'Apellidos': 'Sánchez Alberca'}}"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dict2"
+      ],
+      "metadata": {
+        "id": "ktsWX3Il1cs8",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8fe42ecc-3c92-4f4f-e39f-50fb43d92928"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'nombre_completo': {'nombre': 'Alfredo', 'Apellidos': 'Sánchez Alberca'}}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "u2Fb8OTJ73Ys",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "486ae5b5-6972-4c04-caec-461ed5d6ed7b"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'avion': 'vehiculo volador que tiene capacidad de transportar decenas a cientos de personas',\n",
+              " 'casa': 'lugar donde uno habita',\n",
+              " 'astronauta': 'persona que viaja al espacio'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 9
+        }
+      ],
+      "source": [
+        "#Creamos nuestro primer diccionario\n",
+        "Dic = {'avion':'vehiculo volador que tiene capacidad de transportar decenas a cientos de personas',\n",
+        "       'casa':'lugar donde uno habita',\n",
+        "       'astronauta':'persona que viaja al espacio'}\n",
+        "Dic"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "90QxbSGf1Vay",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "fb86fdae-db37-4a5f-e283-51cccf97778c"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'persona que viaja al espacio'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 12
+        }
+      ],
+      "source": [
+        "#Accediendo a la descripcion del dato de mi diccionario.\n",
+        "Dic['astronauta']"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "l76D2y3l1npG"
+      },
+      "outputs": [],
+      "source": [
+        "#Agregando valores a nuestro diccionario\n",
+        "Dic['perro'] = 'mejor amigo del hombre'"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "BqnSykb614Ay"
+      },
+      "outputs": [],
+      "source": [
+        "Dic"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Dic['gato'] = 'Quien le pega al perro'"
+      ],
+      "metadata": {
+        "id": "rBK79-Cw234I"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "miIskQNU2L2O"
+      },
+      "outputs": [],
+      "source": [
+        "#Modificando un valor de un diccionario\n",
+        "Dic['casa'] = 'Lugar donde las personas suelen pasar la noche'"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Dic"
+      ],
+      "metadata": {
+        "id": "tZYCMHqt26pH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Modificando un valor de un diccionario\n",
+        "Dic['gato'] = 'Quien le araña al perro'\n",
+        "Dic"
+      ],
+      "metadata": {
+        "id": "EsOxjcbpCnEr"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "vkoP057V2WE3"
+      },
+      "outputs": [],
+      "source": [
+        "#Agregando distintos datos al diccionario\n",
+        "Dic[3.1416]='Este es el valor de pi'\n",
+        "Dic"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "mTWHPYjS2iVG"
+      },
+      "outputs": [],
+      "source": [
+        "#Modificando un valor de un diccionario\n",
+        "Dic[True]='Esto se da cuando es verdadero'\n",
+        "Dic"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "GcdF8j182qQa"
+      },
+      "outputs": [],
+      "source": [
+        "#Modificando un valor de un diccionario\n",
+        "Dic[20]='la nota que todos sacaremos'\n",
+        "Dic"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Modificando un valor de un diccionario\n",
+        "Dic['pi']= 3.1415\n",
+        "Dic"
+      ],
+      "metadata": {
+        "id": "KY55S23WFthx"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Dic"
+      ],
+      "metadata": {
+        "id": "oNBCdA2Qj6Oy"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Dic[20]"
+      ],
+      "metadata": {
+        "id": "nLvJX6Trj7fI"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "xkLighJ_umlj"
+      },
+      "source": [
+        "## Acceso a los elementos de un diccionario\n",
+        "* **d[clave]** devuelve el valor del diccionario d asociado a la clave clave. Si en el diccionario no existe esa clave devuelve un error.\n",
+        "* **d.get(clave, valor)** devuelve el valor del diccionario d asociado a la clave clave. Si en el diccionario no existe esa clave devuelve valor, y si no se especifica un valor por defecto devuelve None."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "id": "V6GYnvO1uxF_",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "7db68e7d-7d39-4ac3-fe68-9d107adb66a0"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'nombre': 'Alfredo', 'despacho': 218, 'email': 'asalber@ceu.es'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ],
+      "source": [
+        "a = {'nombre':'Alfredo', 'despacho': 218, 'email':'asalber@ceu.es'}\n",
+        "a"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "kxSz5_lv80W1"
+      },
+      "outputs": [],
+      "source": [
+        "dictClientes = {'0001':{'Nombre':'Juan','edad':9},'0002':{'Nombre':'Pedro','edad':19}}\n",
+        "dictClientes\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "PM0UQvp19SkS"
+      },
+      "outputs": [],
+      "source": [
+        "#como accedo a la informacion del diccionario, es a traves de la llave\n",
+        "dictClientes['0002']"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "0HsTWrRVIvaf"
+      },
+      "outputs": [],
+      "source": [
+        "dictClientes['0002']['Nombre']"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "id": "93AZLnZq8AK9",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "189850c1-bf7b-4037-a58e-7affe060fc77"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'asalber@ceu.es'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ],
+      "source": [
+        "#a = {'nombre':'Alfredo', 'despacho': 218, 'email':'asalber@ceu.es'}\n",
+        "a['email']"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "id": "03S4YyOv76WM",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "20e24575-50da-4834-b11c-b0940e9cef4a"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Alfredo'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ],
+      "source": [
+        "a['nombre']"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "id": "BDDZFBHD99EW",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e347607e-3212-47cf-ec75-b1ecf8acf90d"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'nombre': 'Alfredo', 'despacho': 218, 'email': 'asalber@ceu.es'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ],
+      "source": [
+        "a"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "id": "0LfBwGd3u0Tr",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0e9a43de-e442-4dd1-d930-978c689e94c7"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'nombre': 'Alfredo', 'despacho': 210, 'email': 'asalber@ceu.es'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ],
+      "source": [
+        "a['despacho'] = 210\n",
+        "a"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 7,
+      "metadata": {
+        "id": "E3ngNI42u6FD",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "c32cb355-83f5-4177-c05e-f3b9c8be7450"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'No existe la llave en el diccionario'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ],
+      "source": [
+        "# Controlar un mensaje, en caso no exista la llave solicitada\n",
+        "a.get('Email','No existe la llave en el diccionario')"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7Dcy9zLwvGXd"
+      },
+      "source": [
+        "## Operaciones que **NO modifican** un diccionario\n",
+        "* **len(d)** : Devuelve el número de elementos del diccionario d.\n",
+        "* **min(d)** : Devuelve la mínima clave del diccionario d siempre que las claves sean comparables.\n",
+        "* **max(d)** : Devuelve la máxima clave del diccionario d siempre que las claves sean comparables.\n",
+        "* **sum(d)** : Devuelve la suma de las claves del diccionario d, siempre que las claves se puedan sumar.\n",
+        "* **clave in d** : Devuelve True si la clave clave pertenece al diccionario d y False en caso contrario.\n",
+        "* **d.keys()** : Devuelve un iterador sobre las claves de un diccionario.\n",
+        "* **d.values()** : Devuelve un iterador sobre los valores de un diccionario.\n",
+        "* **d.items()** : Devuelve un iterador sobre los pares clave-valor de un diccionario."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Uz-4g-IXvpk4"
+      },
+      "outputs": [],
+      "source": [
+        "diccionario_prueba = {'nombre':'Alfredo', 'despacho': 218, 'email':'asalber@ceu.es', 'ciudad': 'Lima'}\n",
+        "diccionario_prueba"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "SsyguRaUvpr5"
+      },
+      "outputs": [],
+      "source": [
+        "len(diccionario_prueba)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "SZ418aw0vaiw"
+      },
+      "outputs": [],
+      "source": [
+        "# min, se acerca a la letra \"a\" / max, se acerca a la letra \"z\"\n",
+        "min(diccionario_prueba)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "r2GdkZwfvtUT"
+      },
+      "outputs": [],
+      "source": [
+        "'nombre' in diccionario_prueba"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "ruAxrz5Ivvbb"
+      },
+      "outputs": [],
+      "source": [
+        "# Nos devuelve todas las llaves que se tienen en el diccionario.\n",
+        "# a = {'nombre':'Alfredo', 'despacho': 218, 'email':'asalber@ceu.es', 'ciudad': ''}\n",
+        "\n",
+        "diccionario_prueba.keys()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for iterante in diccionario_prueba.keys():\n",
+        "  print(iterante)"
+      ],
+      "metadata": {
+        "id": "FicXTZvJBqGd"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "diccionario_prueba"
+      ],
+      "metadata": {
+        "id": "XUUz15R0B3Jp"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "OiuHJVurAQ7N"
+      },
+      "outputs": [],
+      "source": [
+        "for i in diccionario_prueba.keys():\n",
+        "  print('llave:',i , end = ' - ')\n",
+        "  print('valor:',diccionario_prueba[i])"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Da2P2gqgvxzg"
+      },
+      "outputs": [],
+      "source": [
+        "# Nos devuelve todos los resultados de las llavas, que se tienen en el diccionario.\n",
+        "# a = {'nombre':'Alfredo', 'despacho': 218, 'email':'asalber@ceu.es'}\n",
+        "\n",
+        "diccionario_prueba.values()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for iterante in diccionario_prueba.values():\n",
+        "  print(iterante)"
+      ],
+      "metadata": {
+        "id": "eMLVYX12CXyF"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "WniQAnYfv0Fi"
+      },
+      "outputs": [],
+      "source": [
+        "# a = {'nombre':'Alfredo', 'despacho': 218, 'email':'asalber@ceu.es'}\n",
+        "\n",
+        "diccionario_prueba.items()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "e1qscunSCKDM"
+      },
+      "outputs": [],
+      "source": [
+        "for iterante in diccionario_prueba.items():\n",
+        "  print('clave->Valor:',iterante)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "diccionario_prueba.items()"
+      ],
+      "metadata": {
+        "id": "QoqdKZzpC382"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "oN6ZK6nnCZ9b"
+      },
+      "outputs": [],
+      "source": [
+        "for iterante in diccionario_prueba.items():\n",
+        "  #print(iterante)\n",
+        "  print('Llave:',iterante[0], end = ' - ')\n",
+        "  print('Valor:',iterante[1])"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "GfUBlJS5DFuT"
+      },
+      "outputs": [],
+      "source": [
+        "a.items()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "54cIBeXdC1i7"
+      },
+      "outputs": [],
+      "source": [
+        "for k,v in a.items():\n",
+        "  print('Llave:',k)\n",
+        "  print('Valor:',v)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "CC-06rgdv23q"
+      },
+      "source": [
+        "\n",
+        "## Operaciones que **si modifican** un diccionario\n",
+        "* **d[clave] = valor** : Añade al diccionario d el par formado por la clave clave y el valor valor.\n",
+        "* **d.update(d2)**= Añade los pares del diccionario d2 al diccionario d.\n",
+        "* **del d[clave]** : Elimina del diccionario d el par con la clave clave.\n",
+        "* **d.clear()** : Elimina todos los pares del diccionario d de manera que se queda vacío."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "RnmiO7EbwIUe"
+      },
+      "outputs": [],
+      "source": [
+        "diccionario_prueba = {'nombre':'Alfredo', 'despacho': 218, 'email':'asalber@ceu.es'}\n",
+        "diccionario_prueba"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "yIBLtfp1wLLc"
+      },
+      "outputs": [],
+      "source": [
+        "#Agregando informacion a un diccionario.\n",
+        "diccionario_prueba['universidad'] = 'Smart Data'\n",
+        "diccionario_prueba"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "xJhj9growWV0"
+      },
+      "outputs": [],
+      "source": [
+        "#eliminando valores de un diccionario, a traves de su llave\n",
+        "del diccionario_prueba['email']"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "1KJoLl2UuQi4"
+      },
+      "outputs": [],
+      "source": [
+        "diccionario_prueba"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "bwNSeDGAwYSe"
+      },
+      "outputs": [],
+      "source": [
+        "# Elimina toda la informacion del diccionario.\n",
+        "#### !!!!! Delete sin el where en SQL!!!! Cuidado/warning\n",
+        "diccionario_prueba.clear()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        " diccionario_prueba"
+      ],
+      "metadata": {
+        "id": "F9BeoDdgEL5k"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "kXS87XDVweiU"
+      },
+      "source": [
+        "# Copia de diccionarios\n",
+        "Existen dos formas de copiar diccionarios:\n",
+        "\n",
+        "* Copia por referencia **d1 = d2**: Asocia la la variable d1 el mismo diccionario que tiene asociado la variable d2, es decir, ambas variables apuntan a la misma dirección de memoria. Cualquier cambio que hagamos a través de l1 o l2 afectará al mismo diccionario.\n",
+        "* Copia por valor **d1 = dict(d2)**: Crea una copia del diccionario asociado a d2 en una dirección de memoria diferente y se la asocia a d1. Las variables apuntan a direcciones de memoria diferentes que contienen los mismos datos. Cualquier cambio que hagamos a través de l1 no afectará al diccionario de l2 y viceversa."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "metadata": {
+        "id": "pHGPb4EVws1T"
+      },
+      "outputs": [],
+      "source": [
+        "dic1 = {1:'A',\n",
+        "        2:'B',\n",
+        "        3:'C'}"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 10,
+      "metadata": {
+        "id": "8Cq0UK_nwv3k",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "549778ed-8803-47a8-c19a-6ad2b70fc2ce"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{1: 'A', 2: 'B', 3: 'C'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 10
+        }
+      ],
+      "source": [
+        "# copia por referencia (espejo)\n",
+        "dic2 = dic1\n",
+        "dic2"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 11,
+      "metadata": {
+        "id": "jXroXTmvwyvt"
+      },
+      "outputs": [],
+      "source": [
+        "dic2[2] = 'D'"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 12,
+      "metadata": {
+        "id": "hDciXI1vw050",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "2822276d-2f8f-4f5b-8506-59c43d70c6a2"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "dic1: {1: 'A', 2: 'D', 3: 'C'}\n",
+            "dic2: {1: 'A', 2: 'D', 3: 'C'}\n"
+          ]
+        }
+      ],
+      "source": [
+        "print('dic1:',dic1)\n",
+        "print('dic2:',dic2)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 13,
+      "metadata": {
+        "id": "qUx3q4ZBw4IQ"
+      },
+      "outputs": [],
+      "source": [
+        "#copia de valores\n",
+        "a = {1:'A', 2:'B', 3:'C'}"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 14,
+      "metadata": {
+        "id": "aS-3L3LAw724",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "17b84d11-0223-4581-8dfc-5c714039ca1b"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{1: 'A', 2: 'B', 3: 'C'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ],
+      "source": [
+        "# copia por valores\n",
+        "b = dict(a)\n",
+        "b"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 15,
+      "metadata": {
+        "id": "Ko-cGugFw_WA"
+      },
+      "outputs": [],
+      "source": [
+        "b[2] = 'D'"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 16,
+      "metadata": {
+        "id": "g7CEsIdKxBza",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0f545665-43b8-4a8c-89a8-dfccc8232a99"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "dic1: {1: 'A', 2: 'B', 3: 'C'}\n",
+            "dic2: {1: 'A', 2: 'D', 3: 'C'}\n"
+          ]
+        }
+      ],
+      "source": [
+        "print('dic1:',a)\n",
+        "print('dic2:',b)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Px6jSNVTed5k"
+      },
+      "source": [
+        "## Ejercicio 1 - LISTAS\n",
+        "Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista y la muestre por pantalla."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#9:35"
+      ],
+      "metadata": {
+        "id": "xPreYlwked-5"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cant_materia = int(input('Ingrese la cantidad de materias a registrar en la lista: '))\n",
+        "lista_materias = list()\n",
+        "\n",
+        "for i in range(cant_materia):\n",
+        "  materia = input(f'Ingrese la materia numero {i+1}:')\n",
+        "  lista_materias.append(materia)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kBHa_lOEnSIN",
+        "outputId": "2ff165dd-6875-42ae-9ac5-1682f4b79927"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ingrese la cantidad de materias a registrar en la lista: 5\n",
+            "Ingrese la materia numero 1:Matemáticas\n",
+            "Ingrese la materia numero 2:Física\n",
+            "Ingrese la materia numero 3:Quimica\n",
+            "Ingrese la materia numero 4:Historia\n",
+            "Ingrese la materia numero 5:Lengua\n",
+            "La materia registrada es: Matemáticas\n",
+            "La materia registrada es: Física\n",
+            "La materia registrada es: Quimica\n",
+            "La materia registrada es: Historia\n",
+            "La materia registrada es: Lengua\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_materias"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CdX7NhE4Fd0z",
+        "outputId": "46cef1c5-1b82-440b-ab6e-af411593a654"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Matemáticas', 'Física', 'Quimica', 'Historia', 'Lengua']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 250
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for i in lista_materias:\n",
+        "  print('La materia registrada es:', i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8Up-bP1iFZor",
+        "outputId": "76d74896-539b-48d5-a794-512607f55ce7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "La materia registrada es: Matemáticas\n",
+            "La materia registrada es: Física\n",
+            "La materia registrada es: Quimica\n",
+            "La materia registrada es: Historia\n",
+            "La materia registrada es: Lengua\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "m3LCgILeej9l"
+      },
+      "source": [
+        "## Ejercicio 2 - LISTAS\n",
+        "Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista y la muestre por pantalla el mensaje:\n",
+        "* Yo estudio **ASIGNATURA**, donde **ASIGNATURA** es cada una de las asignaturas de la lista."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "OhB1NyoPtcjs"
+      },
+      "outputs": [],
+      "source": [
+        "#9:40"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for i in lista_materias:\n",
+        "  print('Yo estudio', i+',', 'donde', i, 'es cada de una de las asignaturas de la lista')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kNB-jzKYoJBG",
+        "outputId": "5b3a8d30-8cab-4935-cc0a-83a9a8a68536"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Yo estudio Matemáticas, donde Matemáticas es cada de una de las asignaturas de la lista\n",
+            "Yo estudio Física, donde Física es cada de una de las asignaturas de la lista\n",
+            "Yo estudio Quimica, donde Quimica es cada de una de las asignaturas de la lista\n",
+            "Yo estudio Historia, donde Historia es cada de una de las asignaturas de la lista\n",
+            "Yo estudio Lengua, donde Lengua es cada de una de las asignaturas de la lista\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for i in lista_materias:\n",
+        "  print('Yo estudio', i,', donde', i, 'es cada de una de las asignaturas de la lista')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FFxpdQuAGV0d",
+        "outputId": "06a22869-c6f1-4a9a-ee13-d936df268bed"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Yo estudio Matemáticas , donde Matemáticas es cada de una de las asignaturas de la lista\n",
+            "Yo estudio Física , donde Física es cada de una de las asignaturas de la lista\n",
+            "Yo estudio Quimica , donde Quimica es cada de una de las asignaturas de la lista\n",
+            "Yo estudio Historia , donde Historia es cada de una de las asignaturas de la lista\n",
+            "Yo estudio Lengua , donde Lengua es cada de una de las asignaturas de la lista\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6T6twqBNfJ7k"
+      },
+      "source": [
+        "## Ejercicio 3 - LISTAS\n",
+        "Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista, pregunte al usuario la nota que ha sacado en cada asignatura, y después las muestre por pantalla con el mensaje:\n",
+        "* En **ASIGNATURA** has sacado **NOTA** donde **ASIGNATURA** es cada una des las asignaturas de la lista y **NOTA** cada una de las correspondientes **NOTA** introducidas por el usuario."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#9:45\n",
+        "lista_notas = []\n",
+        "\n",
+        "for i in range(len(lista_materias)): #range(5): 0,1,2,3,4\n",
+        "  nota = input(f'Ingrese la nota para la materia {lista_materias[i]}: ')\n",
+        "  lista_notas.append(nota)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FN3dvkYPpokt",
+        "outputId": "cb8e22a8-b1a9-4a39-91ff-ac51331b9256"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Ingrese la nota para la materia Matemáticas: 12\n",
+            "Ingrese la nota para la materia Física: 15\n",
+            "Ingrese la nota para la materia Quimica: 20\n",
+            "Ingrese la nota para la materia Historia: 5\n",
+            "Ingrese la nota para la materia Lengua: 10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for i in range(len(lista_materias)):\n",
+        "  print('En',lista_materias[i]+',','has sacado la nota de:',lista_notas[i])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "69QMmjHAHHXk",
+        "outputId": "14ff24a9-2013-486c-f591-2a576c0d7cc6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "En Matemáticas, has sacado la nota de: 12\n",
+            "En Física, has sacado la nota de: 15\n",
+            "En Quimica, has sacado la nota de: 20\n",
+            "En Historia, has sacado la nota de: 5\n",
+            "En Lengua, has sacado la nota de: 10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "w_IHdJlYfmKm"
+      },
+      "source": [
+        "## Ejericicio 4 - LISTAS\n",
+        "Escribir un programa que pregunte al usuario los números ganadores de la lotería \"la tinka\", los almacene en una lista y los muestre por pantalla ordenados de menor a mayor."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "iVDATFYWf_lb"
+      },
+      "outputs": [],
+      "source": [
+        "#9:55 - Opcion1\n",
+        "numeros_tinka = list()\n",
+        "cantidad = int(input(\"¿Cuántos números ganadores tiene la tinka? \"))\n",
+        "\n",
+        "for i in range(cantidad):\n",
+        "    numero = int(input(f\"Ingrese el número ganador {i+1}: \"))\n",
+        "    numeros_tinka.append(numero)\n",
+        "\n",
+        "numeros_tinka.sort()\n",
+        "\n",
+        "print(\"Los números ganadores ordenados de menor a mayor son:\")\n",
+        "print(numeros_tinka)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#9:55 - Opcion 2\n",
+        "numeros_tinka = list()\n",
+        "cantidad = int(input(\"¿Cuántos números ganadores tiene la tinka? \"))\n",
+        "\n",
+        "for i in range(cantidad):\n",
+        "    numero = int(input(f\"Ingrese el número ganador {i+1}: \"))\n",
+        "    numeros_tinka.append(numero)\n",
+        "\n",
+        "numeros_tinka.sort()\n",
+        "\n",
+        "for i in numeros_tinka:\n",
+        "  print(\"Los números ganadores ordenados de menor a mayor son:\",i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6Dd11RE_KQCB",
+        "outputId": "690b85e3-e44f-4110-b344-707d93d85397"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "¿Cuántos números ganadores tiene la tinka? 12\n",
+            "Ingrese el número ganador 1: 32\n",
+            "Ingrese el número ganador 2: 12\n",
+            "Ingrese el número ganador 3: 23\n",
+            "Ingrese el número ganador 4: 43\n",
+            "Ingrese el número ganador 5: 5\n",
+            "Ingrese el número ganador 6: 2\n",
+            "Ingrese el número ganador 7: 8\n",
+            "Ingrese el número ganador 8: 45\n",
+            "Ingrese el número ganador 9: 23\n",
+            "Ingrese el número ganador 10: 12\n",
+            "Ingrese el número ganador 11: 65\n",
+            "Ingrese el número ganador 12: 45\n",
+            "Los números ganadores ordenados de menor a mayor son: 2\n",
+            "Los números ganadores ordenados de menor a mayor son: 5\n",
+            "Los números ganadores ordenados de menor a mayor son: 8\n",
+            "Los números ganadores ordenados de menor a mayor son: 12\n",
+            "Los números ganadores ordenados de menor a mayor son: 12\n",
+            "Los números ganadores ordenados de menor a mayor son: 23\n",
+            "Los números ganadores ordenados de menor a mayor son: 23\n",
+            "Los números ganadores ordenados de menor a mayor son: 32\n",
+            "Los números ganadores ordenados de menor a mayor son: 43\n",
+            "Los números ganadores ordenados de menor a mayor son: 45\n",
+            "Los números ganadores ordenados de menor a mayor son: 45\n",
+            "Los números ganadores ordenados de menor a mayor son: 65\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "dcX4_Z-ofuDj"
+      },
+      "source": [
+        "## Ejercicio 5 - LISTAS\n",
+        "Escribir un programa que almacene en una lista los números del 1 al 10 y los muestre por pantalla en orden inverso separados por comas."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "jjAaL7xtfv6U"
+      },
+      "outputs": [],
+      "source": [
+        "#10:00"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ZoDB6Es-fz_z"
+      },
+      "source": [
+        "## Ejercicio 6 - LISTAS\n",
+        "Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista, pregunte al usuario la nota que ha sacado en cada asignatura y elimine de la lista las asignaturas aprobadas.\n",
+        "\n",
+        "Al final el programa debe mostrar por pantalla las asignaturas que el usuario tiene que repetir (reprobado)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "UQsmNzMff3yP"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5rLqXF8hf-cz"
+      },
+      "source": [
+        "## Ejercicio 7 - LISTAS\n",
+        "Escribir un programa que almacene el abecedario en una lista, elimine de la lista las letras que ocupen posiciones múltiplos de 3, y muestre por pantalla la lista resultante."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "sf1U1iW3gAh3"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "rHlKtJsegQhf"
+      },
+      "source": [
+        "## Ejercicio 8 - LISTAS\n",
+        "Escribir un programa que almacene en una lista los siguientes precios, 50, 75, 46, 22, 80, 65, 8, y muestre por pantalla el menor y el mayor de los precios."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "pZTTz5i6h4ZQ"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "pDtQN1gWxNVW"
+      },
+      "source": [
+        "# Ejercicio 9 - DICCIONARIO\n",
+        "Escribir un programa que guarde en una variable el diccionario {'Euro':'€', 'Dollar':'$', 'Yen':'¥'}, pregunte al usuario por una divisa y muestre su símbolo o un mensaje de aviso si la divisa no está en el diccionario."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "dTU_a4I6xPUu"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0V-P3qCMxTOx"
+      },
+      "source": [
+        "# Ejercicio 10 - DICCIONARIO\n",
+        "Escribir un programa que pregunte al usuario su nombre, edad, dirección y teléfono y lo guarde en un diccionario. Después debe mostrar por pantalla el mensaje <nombre> tiene <edad> años, vive en <dirección> y su número de teléfono es <teléfono>."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "8seda7aQxVpd"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "gMNO6x1mxgDF"
+      },
+      "source": [
+        "## Ejercicio 11 - DICCIONARIO\n",
+        "\n",
+        "Escribir un programa que guarde en un diccionario los precios de las frutas de la tabla, pregunte al usuario por una fruta, un número de kilos y muestre por pantalla el precio de ese número de kilos de fruta. Si la fruta no está en el diccionario debe mostrar un mensaje informando de ello.\n",
+        "\n",
+        "| Fruta | Precio|\n",
+        "|:-|:-:|\n",
+        "|Plátano | 1.35 |\n",
+        "|Manzana | 0.80|\n",
+        "|Pera| 0.85|\n",
+        "|Naranja | 0.70|"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "KUAglHvgxhVr"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "huHvXfNRPgaW"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "87L2esSiTzKA"
+      },
+      "source": [
+        "## Ejercicio 12 - DICCIONARIO\n",
+        "\n",
+        "Escribir un programa que almacene el diccionario con los créditos de las asignaturas de un curso `{'Matemáticas': 6, 'Física': 4, 'Química': 5}` y después muestre por pantalla los créditos de cada asignatura en el formato `<asignatura> tiene <créditos> créditos`, donde `<asignatura>` es cada una de las asignaturas del curso, y `<créditos>` son sus créditos. Al final debe mostrar también el número total de créditos del curso."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "WrsLAiadT2l5"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "t4S2a04_UYhl"
+      },
+      "source": [
+        "## Ejercicio - CHALLENGE (OPCIONAL)\n",
+        "\n",
+        "Escribir un programa que permita gestionar la base de datos de clientes de una empresa. Los clientes se guardarán en un diccionario en el que la clave de cada cliente será su NIF, y el valor será otro diccionario con los datos del cliente (nombre, dirección, teléfono, correo, preferente), donde preferente tendrá el valor `True` si se trata de un cliente preferente. El programa debe preguntar al usuario por una opción del siguiente menú: (1) Añadir cliente, (2) Eliminar cliente, (3) Mostrar cliente, (4) Listar todos los clientes, (5) Listar clientes preferentes, (6) Terminar. En función de la opción elegida el programa tendrá que hacer lo siguiente:\n",
+        "\n",
+        "1. Preguntar los datos del cliente, crear un diccionario con los datos y añadirlo a la base de datos.\n",
+        "2. Preguntar por el NIF del cliente y eliminar sus datos de la base de datos.\n",
+        "3. Preguntar por el NIF del cliente y mostrar sus datos.\n",
+        "4. Mostrar lista de todos los clientes de la base datos con su NIF y nombre.\n",
+        "5. Mostrar la lista de clientes preferentes de la base de datos con su NIF y nombre.\n",
+        "6. Terminar el programa."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "wpdMJwauUblY"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "b0oTwUtbU1HY"
+      },
+      "source": [
+        "## Ejercicio OBLIGATORIO\n",
+        "\n",
+        "Escribir un programa que pregunte por una muestra de números, separados por comas, los guarde en una tupla y muestre por pantalla su media."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "lvoHbdVlU3vv"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "-SDbOal3KDSV"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
